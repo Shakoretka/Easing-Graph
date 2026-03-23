@@ -31,4 +31,4 @@ See the LICENSE file for details.
 ## Support the project
 If this library is useful in your production,
 consider supporting development:
-[[link](https://boosty.to/shakoretka)]
+[Boosty Articles and Donations(https://boosty.to/shakoretka)]
