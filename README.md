@@ -1,3 +1,9 @@
+# Easing Graph
+
+Easing functions library for Unity node based tools
+
+![Easinf Preview](https://github.com/Shakoretka/shakoretka.github.io/blob/main/Drive/EasingPreview.webp?raw=true)
+
 ## Features
 - 30 easing functions
 - Custom HLSL + ShaderGraph/VFXGraph nodes
