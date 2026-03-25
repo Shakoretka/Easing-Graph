@@ -1,67 +1,55 @@
-# О проекте
+# Easing Graph for Unity
 
-**Easing Graph** — это набор переиспользуемых easing-функций, предназначенных для работы в реальном времени и упрощающих создание процедурной анимации и визуальных эффектов в Unity.
+**Easing Graph** is a collection of reusable easing functions designed for real-time performance, simplifying the creation of procedural animations and visual effects in Unity.
 
-Библиотека включает **30 наиболее распространённых easing-функций**, реализованных в нескольких формах:
-
-* **Sub Graph** для Shader Graph и VFX Graph
-* **универсальную ноду-селектор `easeSelector`**, позволяющую переключаться между различными типами easing без перестройки графа
-* **HLSL-реализацию `easeSelectorFloat`**, предназначенную для использования в **VFX Graph** в качестве ноды-селектора через Custom HLSL
-
-Цель библиотеки — устранить необходимость повторной реализации математических формул, обеспечить единообразное поведение и описание easing-кривых в разных инструментах, а также предоставить стабильные, готовые к использованию GPU-реализации.
+The library includes **30 of the most common easing functions**, implemented as optimized GPU solutions for both Shader Graph and VFX Graph.
 
 ---
 
-## Состав пакета
+## Key Features
+
+* **Sub Graphs:** Individual nodes for every easing function in Shader Graph and VFX Graph.
+* **Universal Selector:** A specialized `easeSelector` node that allows switching between easing types dynamically without rebuilding the graph.
+* **HLSL Implementation:** Includes `easeSelectorFloat` for **VFX Graph**, designed for use within **Custom HLSL** nodes.
+* **GPU Optimized:** Mathematical definitions are identical across all tools and tailored for high-performance execution.
+
+---
+
+## Package Contents
 
 ### Shader Graph
-
-* Отдельные Sub Graph для каждой easing-функции
-* Универсальная нода-селектор, предоставляющая доступ ко всем режимам easing через единый интерфейс
-* Демонстрационный Shader Graph, в котором все функции представлены в табличном виде с динамическими превью прямо в редакторе нод
+* **Individual Nodes:** Dedicated Sub Graphs for each easing type.
+* **Unified Interface:** A selector node to access all modes via a single dropdown/index.
+* **Gallery Scene:** A demonstration graph featuring a grid view of all functions with dynamic previews directly within the node editor.
 
 ### Visual Effect Graph
-
-* Отдельные Sub Graph для каждой easing-функции
-* HLSL-файл, предоставляющий доступ ко всем режимам easing через единый интерфейс, который необходимо указать в качестве reference для ноды **Custom HLSL**
-* Демонстрационная сцена VFX Graph, показывающая работу кривых на динамично анимированных частицах с подписями и синхронизированной анимацией
-
----
-
-## Цели разработки
-
-* единые математические определения easing-функций для Shader Graph и VFX Graph
-* реализация, оптимизированная для выполнения на GPU
-* простая интеграция в существующие проекты без дополнительной настройки
-* наличие визуальных примеров, помогающих художникам и разработчикам выбирать подходящую кривую
+* **VFX Sub Graphs:** Native support for easing within particle systems.
+* **Custom HLSL Support:** An HLSL reference file for advanced logic integration.
+* **Demo Scene:** A showcase of curves applied to dynamic particles with synchronized animations and labels.
 
 ---
 
-## Области применения
+## Technical Details & Usage
 
-Библиотека может использоваться для:
+### Important Notes
+* **Scalar Input:** Easing functions accept only **scalar values** (float).
+* **Normalized Range:** Input values are expected to be in the **[0, 1]** range. Use *Remap*, *Clamp*, or *Frac* operations if your input exceeds this range.
+* **Overshoot:** Functions such as **Back** and **Elastic** may return values **greater than 1 or less than 0**. Be mindful of this when driving parameters like Opacity or Scale, as it may cause visual artifacts.
 
-* управления таймингом анимации частиц
-* процедурной анимации и деформации в шейдерах
-* анимации интерфейса, реализованной через Shader Graph
-* любых задач, где требуется нелинейная интерполяция, выполняемая на GPU в системах Graph
-
----
-
-## Важно
-
-* Easing-функции принимают только **скалярные значения**
-* Ожидается, что входные значения находятся в диапазоне **от 0 до 1** — при необходимости используйте remap, clamp или дробную часть значения
-* Функции типов **Back** и **Elastic** могут выдавать значения **выше 1 и ниже 0**, что может приводить к артефактам и некорректной отрисовке, особенно в Shader Graph
-
----
-
-Пакет спроектирован как лёгкая и самодостаточная библиотека, совместимая со стандартными рендер-пайплайнами Unity, поддерживающими Shader Graph и Visual Effect Graph.
+### Installation
+1. Purchase/Add to My Assets: Visit the Easing Graph Asset Store Page and click "Add to My Assets".
+2. Open Unity Project: Launch the Unity Editor and open your project.
+3. Package Manager: Navigate to Window > Package Manager.
+    * Change the filter (top left) to "Packages: My Assets".
+4. Download & Import:
+    * Find Easing Graph in the list.
+    * Click Download, then click Import.
+5. In the "Import Unity Package" window, ensure all files are selected and click Import.
 
 ---
 
-**Автор:**
-Shakoretka
+**Author:** [SwiftFX](https://github.com/shakoretka)  
+**Contact:** [swiftfxtools@gmail.com](mailto:swiftfxtools@gmail.com)
 
-**Контактная почта:**
-[shakoretka@ya.ru](mailto:shakoretka@ya.ru)
+---
+*Designed as a lightweight, self-contained library compatible with all Unity Render Pipelines (URP/HDRP) 2023.2+ supporting Shader Graph and VFX Graph.*
