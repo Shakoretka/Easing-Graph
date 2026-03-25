@@ -52,4 +52,4 @@ The library includes **30 of the most common easing functions**, implemented as 
 **Contact:** [swiftfxtools@gmail.com](mailto:swiftfxtools@gmail.com)
 
 ---
-*Designed as a lightweight, self-contained library compatible with all Unity Render Pipelines (URP/HDRP) 2023.2+ supporting Shader Graph and VFX Graph.*
+*Designed as a lightweight, self-contained library compatible with all Unity Render Pipelines (URP/HDRP) 6.0+ supporting Shader Graph and VFX Graph.*

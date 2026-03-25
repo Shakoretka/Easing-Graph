@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "displayName": "Easing Graph",
     "description": "GPU-optimized easing functions for ShaderGraph and VFXGraph.",
-    "unity": "2023.2",
+    "unity": "6.0",
     "keywords": [
         "easing",
         "shadergraph",
