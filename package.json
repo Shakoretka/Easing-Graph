@@ -1,5 +1,5 @@
 {
-    "name": "com.shakoretka.easing-graph",
+    "name": "com.swiftfx.easing-graph",
     "version": "1.0.0",
     "displayName": "Easing Graph",
     "description": "GPU-optimized easing functions for ShaderGraph and VFXGraph.",
@@ -12,8 +12,8 @@
         "math"
         ],
     "author": {
-        "name": "Shakoretka",
-        "email": "shakoretka@ya.ru",
-        "url": "https://github.com/shakoretka"
+        "name": "Swift FX",
+        "email": "swiftfxtools@gmail.com",
+        "url": "https://shakoretka.github.io/SwiftXF/"
         }
 }
