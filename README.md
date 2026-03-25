@@ -29,6 +29,10 @@ https://github.com/Shakoretka/Easing-Graph/releases
 Import it via:
 Assets → Import Package → Custom Package
 
+## Documentation
+
+Avalable [Here](https://docs.google.com/document/d/1_Nran_VnYlj_umnT3s7W3gm2Vkj28QzgvBopOQMPHtA/edit?usp=sharing), and in a pacage.
+
 ## License
 
 This project is licensed under the MIT License.
